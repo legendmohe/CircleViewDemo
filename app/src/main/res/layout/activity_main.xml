@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.legendmohe.circleview.MainActivity"
+    android:id="@+id/container_layout"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.legendmohe.circleview.CircleView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:id="@+id/circle_view"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM2.5 参考值"
+                android:id="@+id/textView1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="038"
+                android:id="@+id/textView2"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="64sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="室内空气"
+                android:id="@+id/textView3"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="滤芯还剩95%"
+                android:id="@+id/textView4"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:alpha="0.5"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="换颜色"
+            android:id="@+id/button4"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粒子数"
+                android:layout_toLeftOf="@+id/dot_number_seekBar"
+                android:layout_alignTop="@+id/dot_number_seekBar"/>
+
+            <SeekBar
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dot_number_seekBar"
+                android:layout_centerHorizontal="true"
+                android:progress="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/dot_number_seekBar_textView"
+                android:layout_alignParentRight="false"
+                android:layout_toRightOf="@+id/dot_number_seekBar"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粒子速度"
+                android:layout_toLeftOf="@+id/dot_speed_seekBar"
+                android:layout_alignTop="@+id/dot_speed_seekBar"/>
+
+            <SeekBar
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dot_speed_seekBar"
+                android:layout_centerHorizontal="true"
+                android:progress="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/dot_speed_seekBar_textView"
+                android:layout_alignParentRight="false"
+                android:layout_toRightOf="@+id/dot_speed_seekBar"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转圈速度"
+                android:layout_toLeftOf="@+id/circle_speed_seekBar"
+                android:layout_alignTop="@+id/circle_speed_seekBar"/>
+
+            <SeekBar
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/circle_speed_seekBar"
+                android:layout_centerHorizontal="true"
+                android:progress="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/circle_speed_seekBar_textView"
+                android:layout_alignParentRight="false"
+                android:layout_toRightOf="@+id/circle_speed_seekBar"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收缩大小"
+                android:layout_toLeftOf="@+id/circle_expend_seekBar"
+                android:layout_alignTop="@+id/circle_expend_seekBar"/>
+
+            <SeekBar
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/circle_expend_seekBar"
+                android:layout_centerHorizontal="true"
+                android:progress="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/circle_expend_seekBar_textView"
+                android:layout_alignParentRight="false"
+                android:layout_toRightOf="@+id/circle_expend_seekBar"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
